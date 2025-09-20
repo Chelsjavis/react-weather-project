@@ -17,7 +17,7 @@ export default function App() {
         </a>{" "}
         and{" "}
         <a
-          href="https://github.com/Chelsjavis/react-weather-project"
+          href="https://extraordinary-wisp-b4e48b.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
