@@ -3,3 +3,12 @@
   margin: 50px auto;
   max-width: 600px;
 }
+
+body {
+  background-color: aqua;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+}

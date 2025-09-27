@@ -10,37 +10,33 @@ export default function Weather() {
             <input
               type="search"
               placeholder="Enter a city"
-              className="search-input"
+              className="search-input w-100"
             ></input>
           </div>
           <div className="col-3">
             <input
               type="submit"
               value="Search"
-              className="btn btn-primary w-100"
+              className="btn search-button w-100"
             ></input>
           </div>
         </div>
         <h1>Sydney</h1>
+        <ul>
+          <li>Tuesday 5pm</li>
+          <li>Sunny</li>
+        </ul>
         <div className="d-flex justify-content-between">
           <div>
-            <img
-              href="https://www.gstatic.com/weather/conditions2023/2023.2/svg/sunny_light.svg"
-              className="img-fluid"
-              alt="sunny"
-            ></img>
-            16deg
+            <img href="./cloudy.svg" className="img-fluid" alt="cloudy"></img>
+            <span className="temperature">16</span>
+            <span className="units">°C</span>
+          </div>
+          <div>
             <ul>
               <li>Precipitation: 0%</li>
               <li>Humidity: 58% </li>
               <li>Wind: 16 km/h</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>Weather</li>
-              <li>Tuesday 5pm</li>
-              <li>Sunny</li>
             </ul>
           </div>
         </div>
