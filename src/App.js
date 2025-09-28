@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather currentCity="Adelaide" />
         <footer className="mt-2">
           This project was coded by Chelsea D, is{" "}
           <a

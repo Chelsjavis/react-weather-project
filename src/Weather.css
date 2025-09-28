@@ -6,6 +6,7 @@
 
 .Weather h1 {
   font-size: 64px;
+  margin-top: 20px;
 }
 
 .Weather .search-input {
