@@ -9,9 +9,13 @@ export default function Weather(props) {
   function handleResponse(response) {
     setDisplayWeather({
       city: response.data.city,
+      date: "Tuesday 5pm",
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
+      description: response.data.condition.description,
+      iconUrl:
+        "https://www.gstatic.com/weather/conditions/v1/svg/partly_cloudy_light.svg",
     });
 
     console.log(response);
@@ -40,12 +44,16 @@ export default function Weather(props) {
           </div>
           <h1>{displayWeather.city}</h1>
           <ul>
-            <li>Tuesday 5pm</li>
-            <li>Sunny</li>
+            <li>{displayWeather.date}</li>
+            <li className="text-capitalize">{displayWeather.description}</li>
           </ul>
           <div className="d-flex justify-content-between">
             <div>
-              <img href="./cloudy.svg" className="img-fluid" alt="cloudy"></img>
+              <img
+                href={displayWeather.iconUrl}
+                className="img-fluid"
+                alt={displayWeather.description}
+              ></img>
               <span className="temperature">
                 {Math.round(displayWeather.temperature)}
               </span>
