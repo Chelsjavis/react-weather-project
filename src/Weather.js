@@ -4,10 +4,10 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
-  const [displayWeather, setDisplayWeather] = useState({});
+  const [weatherData, setweatherData] = useState({});
 
   function handleResponse(response) {
-    setDisplayWeather({
+    setweatherData({
       city: response.data.city,
       date: "Tuesday 5pm",
       temperature: response.data.temperature.current,
@@ -42,27 +42,27 @@ export default function Weather(props) {
               ></input>
             </div>
           </div>
-          <h1>{displayWeather.city}</h1>
+          <h1>{weatherData.city}</h1>
           <ul>
-            <li>{displayWeather.date}</li>
-            <li className="text-capitalize">{displayWeather.description}</li>
+            <li>{weatherData.date}</li>
+            <li className="text-capitalize">{weatherData.description}</li>
           </ul>
           <div className="d-flex justify-content-between">
             <div>
               <img
-                href={displayWeather.iconUrl}
+                href={weatherData.iconUrl}
                 className="img-fluid"
-                alt={displayWeather.description}
+                alt={weatherData.description}
               ></img>
               <span className="temperature">
-                {Math.round(displayWeather.temperature)}
+                {Math.round(weatherData.temperature)}
               </span>
               <span className="units">°C</span>
             </div>
             <div>
               <ul>
-                <li>Humidity: {displayWeather.humidity}% </li>
-                <li>Wind: {displayWeather.wind} km/h</li>
+                <li>Humidity: {weatherData.humidity}% </li>
+                <li>Wind: {weatherData.wind} km/h</li>
               </ul>
             </div>
           </div>
